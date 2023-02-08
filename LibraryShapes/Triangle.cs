@@ -13,8 +13,10 @@ namespace LibraryShapes
         {
             try
             {
-                var exception = a <= 0 || b <= 0 ? throw new ArgumentException("df") : ;
-               
+                if (a<= 0 || b<= 0 || c<=0)
+                {
+                    throw new ArgumentException("Not a positive number");
+                }
             }
             catch (FormatException)
             {
