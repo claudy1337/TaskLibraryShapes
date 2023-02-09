@@ -9,6 +9,7 @@ namespace LibraryShapes
     internal class Triangle
     {
         double[] sides;
+
         public Triangle(double a, double b, double c)
         {
             try
@@ -33,7 +34,7 @@ namespace LibraryShapes
             return Math.Sqrt(halfSide * (halfSide - sides[0]) * (halfSide - sides[1]) * (halfSide - sides[2]));
         }
         
-        private bool isRight() // can use get properties for easy access
+        public bool isRight()
         {
             Array.Sort(sides);
             return Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2) == Math.Pow(sides[2], 2);
